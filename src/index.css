@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    /* Dark theme foundation */
-    --background: 194 38% 19%;  /* Dark teal-gray #1c3943 */
-    --foreground: 211 100% 96%;  /* Off-white #E6F1FF */
+    /* Dark theme foundation - Gray & White */
+    --background: 222 84% 5%;  /* Very dark gray */
+    --foreground: 210 40% 98%;  /* Off-white */
 
-    --card: 182 79% 22%;  /* Darker teal for cards #0c6066 */
-    --card-foreground: 211 100% 96%;
+    --card: 222 84% 8%;  /* Dark gray for cards */
+    --card-foreground: 210 40% 98%;
 
-    --popover: 182 79% 22%;
-    --popover-foreground: 211 100% 96%;
+    --popover: 222 84% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Primary brand colors */
-    --primary: 175 69% 31%;  /* Medium teal #178a7b */
-    --primary-foreground: 211 100% 96%;
+    /* Primary brand colors - Blue for buttons */
+    --primary: 182 79% 22%;  /* Blue #0c6066 */
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 154 45% 52%;  /* Teal-green #53b37e */
-    --secondary-foreground: 85 57% 66%;
+    --secondary: 210 40% 90%;  /* Light gray */
+    --secondary-foreground: 222 84% 5%;
 
-    --muted: 182 79% 22%;
-    --muted-foreground: 154 45% 52%;
+    --muted: 210 40% 3%;
+    --muted-foreground: 215 20% 65%;
 
-    /* Accent - bright green-yellow */
-    --accent: 85 57% 66%;  /* Light green #9fd877 */
-    --accent-foreground: 85 57% 66%;
+    /* Accent - Light gray */
+    --accent: 210 40% 90%;
+    --accent-foreground: 222 84% 5%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 211 100% 96%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 175 69% 31%;
-    --input: 182 79% 22%;
-    --ring: 85 57% 66%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 182 79% 22%;
 
     --radius: 0.75rem;
     
     /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(194 38% 19%) 0%, hsl(182 79% 22%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(85 57% 66%) 0%, hsl(59 93% 71%) 100%);
-    --shadow-glow: 0 0 40px hsl(85 57% 66% / 0.3);
-    --shadow-card: 0 25px 50px -12px hsl(194 38% 10% / 0.5);
+    --gradient-hero: linear-gradient(135deg, hsl(222 84% 5%) 0%, hsl(222 84% 8%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(210 40% 90%) 0%, hsl(210 40% 95%) 100%);
+    --shadow-glow: 0 0 40px hsl(182 79% 22% / 0.3);
+    --shadow-card: 0 25px 50px -12px hsl(222 84% 2% / 0.5);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -92,9 +92,9 @@
   /* Animated background network */
   .network-bg {
     background-image: 
-      radial-gradient(circle at 20% 50%, hsl(85 57% 66% / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(85 57% 66% / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, hsl(85 57% 66% / 0.08) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, hsl(182 79% 22% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(182 79% 22% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(182 79% 22% / 0.08) 0%, transparent 50%);
   }
 
   /* Scroll animations */
