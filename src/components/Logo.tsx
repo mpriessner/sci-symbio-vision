@@ -13,8 +13,8 @@ const Logo = ({ className = "" }: LogoProps) => {
       className={className}
     >
       {/* Placeholder Icon: Two overlapping circles for "Symbiosis" */}
-      <circle cx="20" cy="20" r="12" stroke="hsl(var(--accent))" strokeWidth="2"/>
-      <circle cx="32" cy="20" r="12" stroke="hsl(var(--accent))" strokeWidth="1.5" strokeOpacity="0.7"/>
+      <circle cx="20" cy="20" r="12" stroke="#0c6066" strokeWidth="2"/>
+      <circle cx="32" cy="20" r="12" stroke="#0c6066" strokeWidth="1.5" strokeOpacity="0.7"/>
       {/* Placeholder Text: "SciSymbio" in the defined font */}
       <text 
         x="52" 

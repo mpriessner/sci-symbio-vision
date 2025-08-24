@@ -7,43 +7,43 @@
 @layer base {
   :root {
     /* Dark theme foundation */
-    --background: 210 45% 9%;  /* Deep navy blue #0A192F */
+    --background: 194 38% 19%;  /* Dark teal-gray #1c3943 */
     --foreground: 211 100% 96%;  /* Off-white #E6F1FF */
 
-    --card: 210 40% 15%;  /* Slightly lighter navy for cards */
+    --card: 182 79% 22%;  /* Darker teal for cards #0c6066 */
     --card-foreground: 211 100% 96%;
 
-    --popover: 210 40% 15%;
+    --popover: 182 79% 22%;
     --popover-foreground: 211 100% 96%;
 
     /* Primary brand colors */
-    --primary: 210 45% 9%;  /* Deep navy */
+    --primary: 175 69% 31%;  /* Medium teal #178a7b */
     --primary-foreground: 211 100% 96%;
 
-    --secondary: 210 20% 55%;  /* Lighter gray #8892B0 */
-    --secondary-foreground: 211 100% 96%;
+    --secondary: 154 45% 52%;  /* Teal-green #53b37e */
+    --secondary-foreground: 194 38% 19%;
 
-    --muted: 210 40% 15%;
-    --muted-foreground: 210 20% 55%;
+    --muted: 182 79% 22%;
+    --muted-foreground: 154 45% 52%;
 
-    /* Accent - luminous teal */
-    --accent: 174 100% 70%;  /* Bright teal #64FFDA */
-    --accent-foreground: 210 45% 9%;
+    /* Accent - bright green-yellow */
+    --accent: 85 57% 66%;  /* Light green #9fd877 */
+    --accent-foreground: 194 38% 19%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 211 100% 96%;
 
-    --border: 210 40% 20%;
-    --input: 210 40% 20%;
-    --ring: 174 100% 70%;
+    --border: 175 69% 31%;
+    --input: 182 79% 22%;
+    --ring: 85 57% 66%;
 
     --radius: 0.75rem;
     
     /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(210 45% 9%) 0%, hsl(210 40% 15%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(174 100% 70%) 0%, hsl(186 100% 60%) 100%);
-    --shadow-glow: 0 0 40px hsl(174 100% 70% / 0.3);
-    --shadow-card: 0 25px 50px -12px hsl(210 45% 4% / 0.5);
+    --gradient-hero: linear-gradient(135deg, hsl(194 38% 19%) 0%, hsl(182 79% 22%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(85 57% 66%) 0%, hsl(59 93% 71%) 100%);
+    --shadow-glow: 0 0 40px hsl(85 57% 66% / 0.3);
+    --shadow-card: 0 25px 50px -12px hsl(194 38% 10% / 0.5);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -92,9 +92,9 @@
   /* Animated background network */
   .network-bg {
     background-image: 
-      radial-gradient(circle at 20% 50%, hsl(174 100% 70% / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(174 100% 70% / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, hsl(174 100% 70% / 0.08) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, hsl(85 57% 66% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(85 57% 66% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(85 57% 66% / 0.08) 0%, transparent 50%);
   }
 
   /* Scroll animations */
