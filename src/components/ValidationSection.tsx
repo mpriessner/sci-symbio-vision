@@ -5,7 +5,7 @@ const ValidationSection = () => {
     <section className="py-24 px-6 bg-muted/50">
       <div className="max-w-4xl mx-auto text-center">
         <h3 className="text-4xl md:text-5xl font-bold mb-12 fade-in-up">
-          Our Vision. <span className="text-accent">Validated at the Highest Level.</span>
+          Our Vision. <span className="text-foreground">Validated at the Highest Level.</span>
         </h3>
         
         {/* Industry Leader Icon */}
@@ -23,7 +23,7 @@ const ValidationSection = () => {
         </blockquote>
         
         {/* Attribution */}
-        <p className="text-lg text-secondary-foreground font-medium fade-in-up">
+        <p className="text-lg text-foreground/70 font-medium fade-in-up">
           – Director of AI at a leading global pharmaceutical company
         </p>
       </div>

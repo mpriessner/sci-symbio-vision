@@ -1,14 +1,12 @@
-interface LogoProps {
+interface HeroLogoProps {
   className?: string;
-  width?: number;
-  height?: number;
 }
 
-const Logo = ({ className = "", width = 160, height = 72 }: LogoProps) => {
+const HeroLogo = ({ className = "" }: HeroLogoProps) => {
   return (
     <svg 
-      width={width}
-      height={height}
+      width="300"
+      height="135"
       viewBox="0 0 494 221" 
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -39,4 +37,4 @@ const Logo = ({ className = "", width = 160, height = 72 }: LogoProps) => {
   );
 };
 
-export default Logo;
+export default HeroLogo;

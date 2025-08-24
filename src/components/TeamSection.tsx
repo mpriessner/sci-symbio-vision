@@ -1,25 +1,31 @@
 import { LinkedinIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import martinPhoto from "@/assets/images/Martin_Priessner.png";
+import lukasPhoto from "@/assets/images/Lukas_Zitz.jpeg";
+import markusPhoto from "@/assets/images/Markus_Habernig.jpeg";
 
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Martin Priessner",
-      title: "CEO & Vision",
-      description: "Fusing deep research experience (AstraZeneca, PhD) with applied AI and strategic expertise (BCG).",
-      linkedIn: "#" // Replace with actual LinkedIn URLs
+      name: "Dr. Martin Priessner",
+      title: "CEO, CTO",
+      description: "Experienced the problem firsthand as a Chemist & AI Expert at AstraZeneca. Built the vision and leads the development of SciSymbio's AI platform. PhD in Chemistry from Imperial College London.",
+      linkedIn: "#", // Replace with actual LinkedIn URLs
+      photo: martinPhoto
     },
     {
       name: "Lukas Zitz", 
-      title: "CCO & International Growth",
-      description: "Expert in international market expansion and strategic networks (Austrian Trade Commission, New York).",
-      linkedIn: "#"
+      title: "CSO",
+      description: "Dep. Austrian Trade Commissioner, drives US market entry for Austrian companies. Proven leader, managing a team responsible for transatlantic launches. NYC-based, he oversees fundraising and customer acquisition.",
+      linkedIn: "#",
+      photo: lukasPhoto
     },
     {
       name: "Markus Habernig",
-      title: "COO & Strategy", 
-      description: "Specialist in pharma strategy and commercialization with an insider's perspective (BDO, Boehringer Ingelheim).",
-      linkedIn: "#"
+      title: "COO", 
+      description: "7 years as a Manager at BDO, advising Life Science firms on R&D productivity. Expertise in operational bottlenecks and ROI drivers of corporates. Leads customer success, implementation, and scaling operations.",
+      linkedIn: "#",
+      photo: markusPhoto
     }
   ];
 
@@ -28,7 +34,7 @@ const TeamSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h3 className="text-4xl md:text-5xl font-bold mb-6 fade-in-up">
-            Driven by Experience. <span className="text-accent">United by a Mission.</span>
+            United by friendship, <span className="text-foreground">focused on success</span>
           </h3>
         </div>
         
@@ -40,16 +46,18 @@ const TeamSection = () => {
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <CardContent className="p-8 text-center">
-                {/* Professional Portrait Placeholder */}
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent/20 to-accent/5 border-2 border-accent/30 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-accent">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </div>
+                {/* Professional Portrait */}
+                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-accent/30">
+                  <img 
+                    src={member.photo} 
+                    alt={`${member.name} - ${member.title}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 <h4 className="text-2xl font-bold mb-2">{member.name}</h4>
-                <h5 className="text-lg font-semibold text-accent mb-4">{member.title}</h5>
-                <p className="text-secondary-foreground leading-relaxed mb-6">
+                <h5 className="text-lg font-semibold text-foreground mb-4">{member.title}</h5>
+                <p className="text-foreground/70 leading-relaxed mb-6">
                   {member.description}
                 </p>
                 

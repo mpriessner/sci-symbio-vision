@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/Logo";
 import heroBackground from "@/assets/hero-network-bg.jpg";
 
 interface HeroSectionProps {
@@ -21,22 +22,34 @@ const HeroSection = ({ onJoinMission }: HeroSectionProps) => {
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 fade-in-up">
+        {/* Logo */}
+        <div className="mb-8 fade-in-up">
+          <Logo 
+            width={300} 
+            height={135} 
+            className="mx-auto mb-4"
+          />
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+            SciSymbio
+          </h1>
+        </div>
+        
+        <h2 className="text-5xl md:text-7xl font-bold mb-6 fade-in-up">
           The Objective Witness for{" "}
-          <span className="bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent">
+          <span className="text-foreground">
             Every Experiment
           </span>
-        </h1>
+        </h2>
         
-        <h2 className="text-xl md:text-2xl text-secondary-foreground mb-12 max-w-3xl mx-auto leading-relaxed fade-in-up">
+        <h3 className="text-xl md:text-2xl text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed fade-in-up">
           We are solving the multi-billion dollar research reproducibility crisis 
           with the intelligent lab companion of the future.
-        </h2>
+        </h3>
         
         <Button 
           onClick={onJoinMission}
           size="lg"
-          className="px-12 py-6 text-lg font-semibold bg-accent hover:bg-accent/90 text-accent-foreground glow-effect smooth-transition fade-in-up"
+          className="px-12 py-6 text-lg font-semibold bg-foreground hover:bg-foreground/90 text-background hover:text-background glow-effect smooth-transition fade-in-up"
         >
           Join the Mission
         </Button>

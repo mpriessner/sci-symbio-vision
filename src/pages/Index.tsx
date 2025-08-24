@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
+import ProblemDescriptionSection from "@/components/ProblemDescriptionSection";
 import ProblemSection from "@/components/ProblemSection";
+import SolutionSection from "@/components/SolutionSection";
 import VisionSection from "@/components/VisionSection";
 import TeamSection from "@/components/TeamSection";
 import ValidationSection from "@/components/ValidationSection";
@@ -35,7 +37,9 @@ const Index = () => {
     <main className="min-h-screen">
       <Navigation onJoinMission={handleJoinMission} />
       <HeroSection onJoinMission={handleJoinMission} />
+      <ProblemDescriptionSection />
       <ProblemSection />
+      <SolutionSection />
       <VisionSection />
       <TeamSection />
       <ValidationSection />

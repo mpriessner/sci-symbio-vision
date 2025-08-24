@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    /* Dark theme foundation - Gray & White */
-    --background: 222 84% 5%;  /* Very dark gray */
-    --foreground: 210 40% 98%;  /* Off-white */
+    /* Light theme foundation - Bright backgrounds */
+    --background: 0 0% 98%;  /* Very light gray/white */
+    --foreground: 222 84% 15%;  /* Dark gray text */
 
-    --card: 222 84% 8%;  /* Dark gray for cards */
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 96%;  /* Light gray for cards */
+    --card-foreground: 222 84% 15%;
 
-    --popover: 222 84% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 222 84% 15%;
 
     /* Primary brand colors - Blue for buttons */
-    --primary: 182 79% 22%;  /* Blue #0c6066 */
-    --primary-foreground: 210 40% 98%;
+    --primary: 182 79% 22%;  /* Blue #0c6066 - keeping original blue */
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 90%;  /* Light gray */
-    --secondary-foreground: 222 84% 5%;
+    --secondary: 210 40% 94%;  /* Very light gray */
+    --secondary-foreground: 222 84% 15%;
 
-    --muted: 210 40% 3%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 40% 92%;
+    --muted-foreground: 215 20% 45%;
 
     /* Accent - Light gray */
-    --accent: 210 40% 90%;
-    --accent-foreground: 222 84% 5%;
+    --accent: 210 40% 94%;
+    --accent-foreground: 222 84% 15%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
+    --border: 214 32% 88%;
+    --input: 214 32% 94%;
     --ring: 182 79% 22%;
 
     --radius: 0.75rem;
     
-    /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(222 84% 5%) 0%, hsl(222 84% 8%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(210 40% 90%) 0%, hsl(210 40% 95%) 100%);
-    --shadow-glow: 0 0 40px hsl(182 79% 22% / 0.3);
-    --shadow-card: 0 25px 50px -12px hsl(222 84% 2% / 0.5);
+    /* Custom design tokens - Updated for light theme */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(210 40% 96%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(210 40% 94%) 0%, hsl(210 40% 98%) 100%);
+    --shadow-glow: 0 0 40px hsl(182 79% 22% / 0.2);
+    --shadow-card: 0 25px 50px -12px hsl(222 84% 15% / 0.1);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;

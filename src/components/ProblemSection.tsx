@@ -9,10 +9,10 @@ const ProblemSection = () => {
           {/* Left Column - Text Content */}
           <div className="fade-in-left">
             <h3 className="text-4xl md:text-5xl font-bold mb-8">
-              Billions Lost. <span className="text-accent">Progress Stalled.</span>
+              Billions Lost. <span className="text-foreground">Progress Stalled.</span>
             </h3>
             
-            <p className="text-lg text-secondary-foreground mb-12 leading-relaxed">
+            <p className="text-lg text-foreground/70 mb-12 leading-relaxed">
               Over $28 billion is lost annually in the U.S. alone due to research that can't be reproduced. 
               This silent crisis is one of the greatest barriers to innovation. Inefficient documentation, 
               undetected errors, and the loss of invaluable expertise are slowing down discoveries 
@@ -23,11 +23,11 @@ const ProblemSection = () => {
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-accent/10 rounded-lg">
-                  <Clock className="w-6 h-6 text-accent" />
+                  <Clock className="w-6 h-6 text-foreground" />
                 </div>
                 <div>
                   <h4 className="text-xl font-semibold mb-2">Time-Consuming Documentation</h4>
-                  <p className="text-secondary-foreground">
+                  <p className="text-foreground/70">
                     Researchers spend countless hours on manual record-keeping instead of actual discovery.
                   </p>
                 </div>
@@ -35,11 +35,11 @@ const ProblemSection = () => {
               
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-accent/10 rounded-lg">
-                  <FlaskConical className="w-6 h-6 text-accent" />
+                  <FlaskConical className="w-6 h-6 text-foreground" />
                 </div>
                 <div>
                   <h4 className="text-xl font-semibold mb-2">Costly Human Errors</h4>
-                  <p className="text-secondary-foreground">
+                  <p className="text-foreground/70">
                     Small mistakes in protocols or measurements can invalidate entire studies.
                   </p>
                 </div>
@@ -47,11 +47,11 @@ const ProblemSection = () => {
               
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-accent/10 rounded-lg">
-                  <Brain className="w-6 h-6 text-accent" />
+                  <Brain className="w-6 h-6 text-foreground" />
                 </div>
                 <div>
                   <h4 className="text-xl font-semibold mb-2">Loss of "Tacit Knowledge"</h4>
-                  <p className="text-secondary-foreground">
+                  <p className="text-foreground/70">
                     Critical insights and expertise walk out the door when researchers leave.
                   </p>
                 </div>

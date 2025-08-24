@@ -10,10 +10,10 @@ const ContactSection = () => {
     <section id="contact" className="py-24 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <h3 className="text-4xl md:text-5xl font-bold mb-8 fade-in-up">
-          Join the <span className="text-accent">R&D Transformation</span>.
+          Join the <span className="text-foreground">R&D Transformation</span>.
         </h3>
         
-        <p className="text-xl text-secondary-foreground mb-12 leading-relaxed fade-in-up">
+        <p className="text-xl text-foreground/70 mb-12 leading-relaxed fade-in-up">
           We are looking for visionary partners, investors, and talent to set a new standard 
           for science with us. If you share our mission, we would love to hear from you.
         </p>
@@ -22,7 +22,7 @@ const ContactSection = () => {
         <div className="mb-12 fade-in-up">
           <a 
             href="mailto:martin.priessner@scisymbio.com"
-            className="text-2xl font-semibold text-accent hover:text-accent/80 smooth-transition inline-flex items-center space-x-3"
+            className="text-2xl font-semibold text-foreground hover:text-foreground/80 smooth-transition inline-flex items-center space-x-3"
           >
             <Mail className="w-8 h-8" />
             <span>martin.priessner@scisymbio.com</span>

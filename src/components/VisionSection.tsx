@@ -18,10 +18,10 @@ const VisionSection = () => {
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <h3 className="text-4xl md:text-5xl font-bold mb-8 fade-in-up">
           Imagine a world where every discovery is{" "}
-          <span className="text-accent">verifiable</span>.
+          <span className="text-foreground">verifiable</span>.
         </h3>
         
-        <p className="text-xl text-secondary-foreground leading-relaxed fade-in-up">
+        <p className="text-xl text-foreground/70 leading-relaxed fade-in-up">
           SciSymbio is pioneering a new era of scientific integrity. We are building an intelligent partner 
           for researchers that augments human expertise, not replaces it. Our vision is a lab where every step 
           is transparent, every result is traceable, and invaluable knowledge is preserved forever. 

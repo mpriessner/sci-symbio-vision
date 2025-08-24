@@ -26,12 +26,11 @@ const Navigation = ({ onJoinMission }: NavigationProps) => {
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Logo />
+          <Logo width={120} height={54} />
           
           <Button 
             onClick={onJoinMission}
-            variant="outline"
-            className="border-accent text-accent hover:bg-accent hover:text-accent-foreground smooth-transition"
+            className="px-8 py-2 text-sm font-semibold bg-accent hover:bg-accent/90 text-accent-foreground hover:text-accent-foreground smooth-transition"
           >
             Join the Mission
           </Button>
