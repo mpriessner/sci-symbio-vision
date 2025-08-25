@@ -16,14 +16,14 @@ const TeamSection = () => {
     {
       name: "Lukas Zitz", 
       title: "CSO",
-      description: "Dep. Austrian Trade Commissioner, drives US market entry for Austrian companies. Proven leader, managing a team responsible for transatlantic launches. NYC-based, he oversees fundraising and customer acquisition.",
+      description: "Dep. Austrian Trade Commissioner, drives US market entry for Austrian companies. Proven leader, managing a team responsible for transatlantic launches. NYC-based, he oversees fundraising and customer acquisition. (coming soon)",
       linkedIn: "#",
       photo: lukasPhoto
     },
     {
       name: "Markus Habernig",
       title: "COO", 
-      description: "7 years as a Manager at BDO, advising Life Science firms on R&D productivity. Expertise in operational bottlenecks and ROI drivers of corporates. Leads customer success, implementation, and scaling operations.",
+      description: "7 years as a Manager at BDO, advising Life Science firms on R&D productivity. Expertise in operational bottlenecks and ROI drivers of corporates. Leads customer success, implementation, and scaling operations. (coming soon)",
       linkedIn: "#",
       photo: markusPhoto
     }
