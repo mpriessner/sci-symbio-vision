@@ -9,33 +9,24 @@ const ProblemDescriptionSection = () => {
           <div className="fade-in-left">
             <h3 className="text-sm font-semibold text-accent mb-4 fade-in-up">Problem</h3>
             <h2 className="text-4xl md:text-5xl font-bold mb-12 fade-in-up text-foreground">
-              Every day saved in R&D<br />
-              is worth millions but:
+              Every day saved in R&D is<br />
+              worth millions because...
             </h2>
             
             <div className="space-y-8">
               <div>
                 <p className="text-xl leading-relaxed text-foreground/80">
-                  ...scientists spend <span className="font-bold text-foreground">20% of their time*</span> on documentation.
-                </p>
-              </div>
-              
-              <div>
-                <p className="text-xl leading-relaxed text-foreground/80">
-                  ...<span className="font-bold text-foreground">error-prone documentation systems</span> (ELNs) are a massive pain for scientists.
-                </p>
-              </div>
-              
-              <div>
-                <p className="text-xl leading-relaxed text-foreground/80">
-                  ...experimental <span className="font-bold text-foreground">knowledge</span> that was not captured in written form is <span className="font-bold text-foreground">lost in translation</span> between the lab bench and the ELN.
+                  ... scientists <span className="font-bold text-foreground">waste 20%</span> of their <span className="font-bold text-foreground">time¹</span> with inefficient documentation, a <span className="font-bold text-foreground">~$400,000 annual loss</span> per lab², <span className="font-bold text-foreground">causing errors³</span> that contribute to a <span className="font-bold text-foreground">$28B</span> annual <span className="font-bold text-foreground">reproducibility crisis⁴</span> in US.
                 </p>
               </div>
             </div>
             
-            <p className="text-sm text-foreground/60 mt-12 italic">
-              *200+ interviews with preclinical scientists within pharma and academia
-            </p>
+            <div className="text-sm text-foreground/60 mt-12 space-y-1">
+              <p>1. 200+ in-depth interviews with preclinical scientists within pharma and academia.</p>
+              <p>2. Based on a typical 10-person lab and an estimated $200k fully-loaded annual cost per scientist.</p>
+              <p>3. Baker, M. & Penny, D. Is there a reproducibility crisis? <em>Nature 533, 452–454 (2016)</em>.</p>
+              <p>4. Freedman, L. P. et. al (2015) The Economics of Reproducibility in Preclinical Research. <em>PLOS Biology</em>.</p>
+            </div>
           </div>
           
           {/* Right Column - Visual with Quote */}

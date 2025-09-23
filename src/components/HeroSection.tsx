@@ -35,9 +35,9 @@ const HeroSection = ({ onJoinMission }: HeroSectionProps) => {
         </div>
         
         <h2 className="text-5xl md:text-7xl font-bold mb-6 fade-in-up">
-          The Objective Witness for{" "}
+          The AI Lab Companion{" "}
           <span className="text-foreground">
-            Every Experiment
+            Accelerating Drug Discovery
           </span>
         </h2>
         
