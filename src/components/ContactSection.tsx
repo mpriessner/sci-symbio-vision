@@ -3,7 +3,7 @@ import { Mail } from "lucide-react";
 
 const ContactSection = () => {
   const handleEmailClick = () => {
-    window.location.href = "mailto:martin.priessner@scisymbio.com";
+    window.location.href = "mailto:contact@scisymbio.ai";
   };
 
   return (
@@ -21,11 +21,11 @@ const ContactSection = () => {
         {/* Contact Information */}
         <div className="mb-12 fade-in-up">
           <a 
-            href="mailto:martin.priessner@scisymbio.com"
+            href="mailto:contact@scisymbio.ai"
             className="text-2xl font-semibold text-foreground hover:text-foreground/80 smooth-transition inline-flex items-center space-x-3"
           >
             <Mail className="w-8 h-8" />
-            <span>martin.priessner@scisymbio.com</span>
+            <span>contact@scisymbio.ai</span>
           </a>
         </div>
         
