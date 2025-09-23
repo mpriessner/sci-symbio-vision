@@ -1,41 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World Test</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 1rem;
-        }
-        p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <p>This is a simple test page for SciSymbio infrastructure.</p>
-        <p>If you can see this, the deployment is working correctly.</p>
-    </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SciSymbio - The Objective Witness for Every Experiment</title>
+    <meta name="description" content="Solving the multi-billion dollar research reproducibility crisis with the intelligent lab companion of the future. Join the R&D transformation." />
+    <meta name="author" content="SciSymbio" />
+
+    <meta property="og:title" content="SciSymbio - The Objective Witness for Every Experiment" />
+    <meta property="og:description" content="Solving the multi-billion dollar research reproducibility crisis with the intelligent lab companion of the future." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@SciSymbio" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
