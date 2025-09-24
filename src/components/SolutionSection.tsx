@@ -56,8 +56,23 @@ const SolutionSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Key Benefits Summary */}
-          <div className="fade-in-right">
+          {/* Right Column - Video and Key Benefits Summary */}
+          <div className="fade-in-right space-y-8">
+            {/* YouTube Video */}
+            <div className="rounded-2xl overflow-hidden card-shadow">
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/X1Zgf8CwLug"
+                  title="SciSymbio Lab Companion Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+
+            {/* What We Deliver Section */}
             <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-8 card-shadow">
               <h4 className="text-2xl font-bold text-foreground mb-6 text-center">
                 What We Deliver

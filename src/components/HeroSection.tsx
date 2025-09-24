@@ -25,11 +25,11 @@ const HeroSection = ({ onJoinMission }: HeroSectionProps) => {
         {/* Logo */}
         <div className="mb-8 fade-in-up">
           <Logo 
-            width={300} 
-            height={135} 
+            width={400} 
+            height={180} 
             className="mx-auto mb-4"
           />
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-8">
             SciSymbio
           </h1>
         </div>

@@ -16,8 +16,8 @@ const VisionSection = () => {
       
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <h3 className="text-4xl md:text-5xl font-bold mb-8 fade-in-up">
-          Imagine a world where every discovery is{" "}
+        <h3 className="text-4xl md:text-5xl font-bold mb-8 fade-in-up" style={{ lineHeight: '1.1' }}>
+          Imagine a world where<br />every discovery is{" "}
           <span className="text-foreground">verifiable</span>.
         </h3>
         
@@ -26,7 +26,7 @@ const VisionSection = () => {
           for researchers that augments human expertise, not replaces it. Our vision is a lab where every step 
           is transparent, every result is traceable, and invaluable knowledge is preserved forever. 
           We accelerate progress by giving research back its foundation:{" "}
-          <span className="text-accent font-semibold">Trust</span>.
+          <span className="text-foreground font-bold">Trust</span>.
         </p>
       </div>
     </section>
