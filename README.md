@@ -1,73 +1,98 @@
-# Welcome to your Lovable project
+# SciSymbio - The AI Lab Companion
 
-## Project info
+![SciSymbio Logo](public/SciSymbio_Logo.png)
 
-**URL**: https://lovable.dev/projects/2636ff42-95eb-4fdc-b428-fe066c2daa6c
+## About SciSymbio
 
-## How can I edit this code?
+**Solving the multi-billion dollar research reproducibility crisis with the intelligent lab companion of the future.**
 
-There are several ways of editing your application.
+SciSymbio is building the AI-powered lab companion that accelerates drug discovery by ensuring every experiment is documented, reproducible, and optimized. We're transforming how pharmaceutical and biotech research is conducted by capturing the tacit knowledge and procedural details that are currently lost.
 
-**Use Lovable**
+### The Problem
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2636ff42-95eb-4fdc-b428-fe066c2daa6c) and start prompting.
+The scientific community faces a **$28 billion annual reproducibility crisis**. Critical experimental details are lost, procedures aren't properly documented, and valuable tacit knowledge disappears when researchers leave. This slows down drug discovery and wastes billions in research funding.
 
-Changes made via Lovable will be committed automatically to this repo.
+### Our Solution
 
-**Use your preferred IDE**
+An intelligent AI lab companion that:
+- 🎤 **Captures everything** - Voice and video documentation of every experiment
+- 🤖 **Understands context** - AI-powered analysis of procedures and protocols
+- 📊 **Ensures reproducibility** - Automatic documentation and protocol generation
+- 🔬 **Accelerates discovery** - Reduces documentation overhead by 70%
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Our Vision
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+We're building the future of scientific research in three phases:
+1. **Phase 1 (Now)**: Audio-based lab companion for real-time documentation
+2. **Phase 2**: Computer vision integration for automated procedure tracking
+3. **Phase 3**: AR/VR guidance and full lab automation integration
 
-Follow these steps:
+### Validation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- ✅ **100+ customer interviews** with pharma and biotech researchers
+- ✅ **Partnerships** with AstraZeneca, Imperial College London, TU Wien
+- ✅ **Proven demand** across pharmaceutical, biotech, and academic institutions
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Website
 
-# Step 3: Install the necessary dependencies.
-npm i
+Visit our website: [scisymbio.com](https://scisymbio.com)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Technology Stack
+
+This website is built with modern web technologies:
+
+- **Vite** - Fast build tool and dev server
+- **React** - UI framework
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first styling
+- **shadcn/ui** - Beautiful component library
+
+## Development
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Local Development
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/sci-symbio-vision.git
+
+# Navigate to project directory
+cd sci-symbio-vision
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The site will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+# Create production build
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview production build
+npm run preview
+```
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with:
+The website is deployed on GitHub Pages and automatically updates when changes are pushed to the main branch.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Contact
 
-## How can I deploy this project?
+Interested in learning more or joining our mission?
 
-Simply open [Lovable](https://lovable.dev/projects/2636ff42-95eb-4fdc-b428-fe066c2daa6c) and click on Share -> Publish.
+- Website: [scisymbio.com](https://scisymbio.com)
+- Twitter: [@SciSymbio](https://twitter.com/SciSymbio)
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**SciSymbio** - Making every experiment reproducible, one lab at a time.
