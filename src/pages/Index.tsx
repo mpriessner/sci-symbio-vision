@@ -6,14 +6,12 @@ import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import VisionSection from "@/components/VisionSection";
 import ValidationSection from "@/components/ValidationSection";
+import ArticlesTeaser from "@/components/ArticlesTeaser";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Index = () => {
-  useScrollAnimation();
-
   const handleJoinMission = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -42,6 +40,7 @@ const Index = () => {
       <SolutionSection />
       <VisionSection />
       <ValidationSection />
+      <ArticlesTeaser />
       <FAQSection />
       <ContactSection />
       <Footer />

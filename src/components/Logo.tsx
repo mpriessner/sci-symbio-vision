@@ -15,7 +15,7 @@ const Logo = ({ className = "", width = 160, height = 72 }: LogoProps) => {
       preserveAspectRatio="xMidYMid meet"
     >
       <g transform="translate(0.000000,221.000000) scale(0.100000,-0.100000)"
-         fill="#1c1042" 
+         fill="currentColor"
          stroke="none">
         <path d="M1050 2089 c-292 -33 -558 -88 -840 -174 -41 -13 -85 -26 -97 -30
         -12 -3 -33 -15 -47 -26 -26 -20 -26 -20 -26 -238 0 -218 0 -218 51 -261 83

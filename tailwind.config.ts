@@ -19,8 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-				poppins: ['Poppins', 'sans-serif'],
+				sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				serif: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+				display: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
