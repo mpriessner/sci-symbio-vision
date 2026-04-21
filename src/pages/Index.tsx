@@ -6,6 +6,7 @@ import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import VisionSection from "@/components/VisionSection";
 import ValidationSection from "@/components/ValidationSection";
+import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -41,6 +42,7 @@ const Index = () => {
       <SolutionSection />
       <VisionSection />
       <ValidationSection />
+      <FAQSection />
       <ContactSection />
       <Footer />
     </main>
