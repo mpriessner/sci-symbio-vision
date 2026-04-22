@@ -18,7 +18,7 @@ export const CALENDLY_URL =
  * create a project for scisymbio.ai, and paste the project ID here
  * (short alphanumeric code, e.g. "abc123xyz").
  */
-export const CLARITY_PROJECT_ID = "";
+export const CLARITY_PROJECT_ID = "wfmuse0q9m";
 
 /**
  * Cloudflare Web Analytics token for privacy-friendly, cookieless analytics.
@@ -27,4 +27,4 @@ export const CLARITY_PROJECT_ID = "";
  * the Web Analytics dashboard via "Manual setup", and paste the `token`
  * value from the snippet they show (a 32-char hex string).
  */
-export const CLOUDFLARE_ANALYTICS_TOKEN = "";
+export const CLOUDFLARE_ANALYTICS_TOKEN = "92c9c311da9f43dbbae58596fd89cd90";
