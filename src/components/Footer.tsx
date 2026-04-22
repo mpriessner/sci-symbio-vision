@@ -51,8 +51,8 @@ const Footer = () => {
         <div className="mt-14 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/50">
           <p>© 2026 SciSymbio. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-foreground smooth-transition">Legal notice</a>
-            <a href="#" className="hover:text-foreground smooth-transition">Privacy policy</a>
+            <Link to="/privacy#imprint" className="hover:text-foreground smooth-transition">Legal notice</Link>
+            <Link to="/privacy" className="hover:text-foreground smooth-transition">Privacy policy</Link>
           </div>
         </div>
       </div>

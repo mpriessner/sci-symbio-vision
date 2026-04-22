@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import SEO from "@/components/SEO";
+import { faqs } from "@/data/faqs";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ProblemDescriptionSection from "@/components/ProblemDescriptionSection";
@@ -36,17 +37,31 @@ const Index = () => {
     <main className="min-h-screen">
       <SEO
         path="/"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "SciSymbio",
-          url: "https://www.scisymbio.ai",
-          potentialAction: {
-            "@type": "SearchAction",
-            target: "https://www.scisymbio.ai/articles?q={search_term_string}",
-            "query-input": "required name=search_term_string",
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "SciSymbio",
+            url: "https://www.scisymbio.ai",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://www.scisymbio.ai/articles?q={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
           },
-        }}
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
+          },
+        ]}
       />
       <Navigation onJoinMission={handleJoinMission} />
       <HeroSection onJoinMission={handleJoinMission} />
