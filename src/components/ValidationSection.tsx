@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
+import { Quote } from "lucide-react";
+import { testimonials } from "@/data/testimonials";
 
 const ValidationSection = () => {
+  const featured = testimonials[0];
+
   return (
     <section className="py-32 px-6 bg-secondary/40">
       <motion.div
@@ -35,6 +39,33 @@ const ValidationSection = () => {
             AstraZeneca · Takeda · Roche · Boehringer Ingelheim · Harvard · Imperial College London · TU Wien
           </p>
         </div>
+
+        {featured && (
+          <motion.figure
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mt-16 max-w-2xl mx-auto"
+          >
+            <div className="relative bg-background border border-border rounded-lg p-8 md:p-10 shadow-sm">
+              <Quote
+                className="absolute -top-3 left-8 w-6 h-6 text-accent bg-secondary/40 p-1"
+                strokeWidth={1.5}
+                fill="currentColor"
+              />
+              <blockquote className="font-display italic text-xl md:text-2xl text-foreground/85 leading-relaxed mb-6">
+                "{featured.quote}"
+              </blockquote>
+              <figcaption className="text-sm">
+                <div className="font-medium text-foreground">{featured.attribution}</div>
+                {featured.context && (
+                  <div className="text-foreground/55 mt-1">{featured.context}</div>
+                )}
+              </figcaption>
+            </div>
+          </motion.figure>
+        )}
       </motion.div>
     </section>
   );

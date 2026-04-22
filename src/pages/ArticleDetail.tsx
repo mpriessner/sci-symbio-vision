@@ -48,6 +48,7 @@ const ArticleDetail = () => {
         title={article.title}
         description={article.excerpt}
         path={`/articles/${article.slug}`}
+        image={`https://www.scisymbio.ai/og/${article.slug}.png`}
         type="article"
         article={{
           publishedTime: article.date,
@@ -58,7 +59,7 @@ const ArticleDetail = () => {
       />
       <Navigation onJoinMission={handleJoinMission} />
 
-      <article className="pt-40 pb-16 px-6">
+      <article className="pt-28 pb-16 px-6">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,6 +73,17 @@ const ArticleDetail = () => {
             <ArrowLeft className="w-4 h-4" strokeWidth={1.75} />
             All articles
           </Link>
+
+          <div className="rounded-xl overflow-hidden mb-10 shadow-lg border border-border/50">
+            <img
+              src={`/articles-hero/${article.slug}.png`}
+              alt={`${article.category} — ${article.title}`}
+              width={1600}
+              height={800}
+              className="w-full h-auto block"
+              loading="eager"
+            />
+          </div>
 
           <div className="flex items-center gap-4 mb-6 text-xs uppercase tracking-[0.2em] text-foreground/50 font-semibold">
             <span className="text-accent">{article.category}</span>

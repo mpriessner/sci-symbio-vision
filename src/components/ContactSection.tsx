@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
+import { CALENDLY_URL } from "@/config/site";
 
 const ContactSection = () => {
   const handleEmailClick = () => {
@@ -41,14 +42,30 @@ const ContactSection = () => {
             contact@scisymbio.ai
           </a>
 
-          <Button
-            onClick={handleEmailClick}
-            size="lg"
-            className="rounded-full px-8 py-6 text-base font-medium bg-foreground hover:bg-foreground/90 text-background smooth-transition group"
-          >
-            Get in touch
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 smooth-transition" />
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <Button
+              onClick={handleEmailClick}
+              size="lg"
+              className="rounded-full px-8 py-6 text-base font-medium bg-foreground hover:bg-foreground/90 text-background smooth-transition group"
+            >
+              Get in touch
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 smooth-transition" />
+            </Button>
+
+            {CALENDLY_URL && (
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full px-8 py-6 text-base font-medium border-foreground/20 hover:border-accent hover:text-accent smooth-transition group"
+              >
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                  <Calendar className="mr-2 w-4 h-4" />
+                  Book a 20-min intro
+                </a>
+              </Button>
+            )}
+          </div>
         </div>
       </motion.div>
     </section>

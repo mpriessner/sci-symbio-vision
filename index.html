@@ -31,6 +31,28 @@
     <!-- Plausible Analytics — cookieless, GDPR-compliant. No-op until domain is claimed at plausible.io. -->
     <script defer data-domain="scisymbio.ai" src="https://plausible.io/js/script.js"></script>
 
+    <!--
+      Microsoft Clarity — free session recordings + heatmaps. GDPR-friendly.
+
+      TODO(setup):
+        1. Sign up at https://clarity.microsoft.com (free, Microsoft account).
+        2. Create a project named "scisymbio.ai" and copy the project ID
+           (short alphanumeric code shown on the setup page).
+        3. Uncomment the script block below and replace YOUR_CLARITY_PROJECT_ID
+           with the ID from step 2.
+
+      Until that is done, Clarity is inert — no network requests, no tracking.
+    -->
+    <!--
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "YOUR_CLARITY_PROJECT_ID");
+    </script>
+    -->
+
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages

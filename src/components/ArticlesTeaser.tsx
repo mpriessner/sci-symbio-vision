@@ -44,6 +44,16 @@ const ArticleCard = ({ article, index }: { article: typeof articles[0]; index: n
         />
 
         <div className="relative">
+          <div className="rounded-lg overflow-hidden mb-6 aspect-[2/1] border border-border/60">
+            <img
+              src={`/articles-hero/${article.slug}.png`}
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover group-hover:scale-[1.03] smooth-transition"
+              loading="lazy"
+            />
+          </div>
+
           <div className="flex items-center gap-3 mb-5 text-xs uppercase tracking-[0.2em] text-foreground/50 font-semibold">
             <span className="text-accent">{article.category}</span>
             <span>·</span>

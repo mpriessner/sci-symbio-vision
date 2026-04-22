@@ -77,8 +77,17 @@ const Articles = () => {
               >
                 <Link
                   to={`/articles/${article.slug}`}
-                  className="group grid md:grid-cols-[1fr_auto] gap-6 items-start"
+                  className="group grid md:grid-cols-[240px_1fr_auto] gap-6 items-start"
                 >
+                  <div className="rounded-lg overflow-hidden border border-border/60 aspect-[2/1] md:aspect-auto md:h-[140px]">
+                    <img
+                      src={`/articles-hero/${article.slug}.png`}
+                      alt=""
+                      aria-hidden="true"
+                      className="w-full h-full object-cover group-hover:scale-[1.02] smooth-transition"
+                      loading="lazy"
+                    />
+                  </div>
                   <div>
                     <div className="flex items-center gap-4 mb-3 text-xs uppercase tracking-[0.2em] text-foreground/50 font-semibold">
                       <span className="text-accent">{article.category}</span>

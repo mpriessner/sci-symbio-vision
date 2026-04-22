@@ -50,9 +50,10 @@ const Footer = () => {
 
         <div className="mt-14 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/50">
           <p>© 2026 SciSymbio. All rights reserved.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center">
             <Link to="/privacy#imprint" className="hover:text-foreground smooth-transition">Legal notice</Link>
             <Link to="/privacy" className="hover:text-foreground smooth-transition">Privacy policy</Link>
+            <Link to="/security" className="hover:text-foreground smooth-transition">Security</Link>
           </div>
         </div>
       </div>
