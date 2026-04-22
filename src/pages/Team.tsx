@@ -19,7 +19,7 @@ const coFounders = [
   {
     photo: stealthPhoto2,
     role: "Co-founder",
-    background: "Chemistry PhD, MIT postdoc",
+    background: "Chemistry PhD and postdoc",
   },
 ];
 

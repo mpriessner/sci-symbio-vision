@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated image iterations — pick the ones you like, then copy them into
+# public/articles-hero/ and public/og/ (both of which ARE committed).
+scripts/generated-images/
