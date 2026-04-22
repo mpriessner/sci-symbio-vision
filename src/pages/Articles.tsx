@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { articles } from "@/data/articles";
@@ -17,6 +18,24 @@ const Articles = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      <SEO
+        title="Articles"
+        description="Essays on scientific reproducibility, tacit knowledge, ALCOA+ data integrity, and the AI companion that captures what happens at the bench."
+        path="/articles"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "SciSymbio — Notes from the bench",
+          url: "https://www.scisymbio.ai/articles",
+          blogPost: articles.map((a) => ({
+            "@type": "BlogPosting",
+            headline: a.title,
+            url: `https://www.scisymbio.ai/articles/${a.slug}`,
+            author: { "@type": "Person", name: a.author },
+            datePublished: a.date,
+          })),
+        }}
+      />
       <Navigation onJoinMission={handleJoinMission} />
 
       {/* Hero strip */}

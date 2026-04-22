@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ProblemDescriptionSection from "@/components/ProblemDescriptionSection";
@@ -33,6 +34,20 @@ const Index = () => {
 
   return (
     <main className="min-h-screen">
+      <SEO
+        path="/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "SciSymbio",
+          url: "https://www.scisymbio.ai",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://www.scisymbio.ai/articles?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+        }}
+      />
       <Navigation onJoinMission={handleJoinMission} />
       <HeroSection onJoinMission={handleJoinMission} />
       <ProblemDescriptionSection />

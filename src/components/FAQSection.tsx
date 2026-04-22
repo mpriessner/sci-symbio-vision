@@ -17,11 +17,11 @@ const faqs = [
   },
   {
     q: "How is confidential IP and patient data handled — where is it stored, who has access?",
-    a: "Data is encrypted in transit and at rest, stored in your chosen region, and access is scoped per research group. Enterprise deployments support private cloud and on-premise. No training on customer data without explicit opt-in.",
+    a: "Data is encrypted in transit and at rest, stored in your chosen region, and access is scoped per research group. Enterprise deployments support private cloud and on-premise. Customer data is never used to train models.",
   },
   {
     q: "Can the AI understand complex protocols — cell culture, chemical synthesis, multi-step assays?",
-    a: "Yes. The models are fine-tuned on scientific procedure, not generic video. They recognize apparatus, reagents, sequence of operations, and deviations. Accuracy improves with domain-specific calibration during onboarding.",
+    a: "Yes. SciSymbio is built on leading foundation models for voice and vision — we do not train our own models. The companion is grounded in domain context through structured prompting and retrieval over your protocols and reference material. It recognizes apparatus, reagents, sequence of operations, and deviations, and accuracy improves as more of your lab's content is indexed during onboarding — without any model retraining.",
   },
   {
     q: "How is this different from Labguru Assistant, Genemod, or Sapio's AI tools?",
@@ -33,11 +33,7 @@ const faqs = [
   },
   {
     q: "What integrations are planned for lab instruments and existing ELNs?",
-    a: "We are prioritizing Benchling, LabVantage, SciNote, and standard instrument output formats (CSV, XLS, proprietary exports). Custom integrations are available for enterprise pilots.",
-  },
-  {
-    q: "How long does onboarding take for a research group of 10?",
-    a: "Typical pilot: two weeks. Week one is setup and domain calibration. Week two is supervised use with a SciSymbio engineer on-call. After that, the group operates independently.",
+    a: "We are prioritizing integrations with Revvity Signals, BIOVIA, and Benchling — with more ELN and instrument connectors on the roadmap. Standard instrument output formats (CSV, XLS, common proprietary exports) are supported out of the box. Custom integrations are available for enterprise pilots.",
   },
   {
     q: "What does the reproducibility output look like — a report, a structured record, a video clip?",

@@ -57,13 +57,23 @@ const ProblemSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
-              className="bg-card p-10 flex flex-col"
+              className="group bg-card p-10 flex flex-col relative overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6">
-                <issue.icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
+              <motion.div
+                className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-accent/[0.04]"
+                animate={{ scale: [1, 1.15, 1] }}
+                transition={{ duration: 6 + i, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <div className="relative w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 smooth-transition">
+                <motion.div
+                  whileHover={{ rotate: 12 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                >
+                  <issue.icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
+                </motion.div>
               </div>
-              <h3 className="font-display text-2xl mb-3 leading-tight">{issue.title}</h3>
-              <p className="text-foreground/70 leading-relaxed">{issue.body}</p>
+              <h3 className="font-display text-2xl mb-3 leading-tight relative">{issue.title}</h3>
+              <p className="text-foreground/70 leading-relaxed relative">{issue.body}</p>
             </motion.div>
           ))}
         </div>
