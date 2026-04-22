@@ -1,62 +1,59 @@
-/* Typography - Poppins font integration */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* Editorial typography — Fraunces (serif display) + Inter (sans body) */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* SciSymbio Design System - Deep tech, professional, visionary */
+/* SciSymbio Design System v3 — Editorial, warm, confident */
 
 @layer base {
   :root {
-    /* Light theme foundation - Bright backgrounds */
-    --background: 0 0% 98%;  /* Very light gray/white */
-    --foreground: 222 84% 15%;  /* Dark gray text */
+    /* Warm cream foundation, Anthropic-inspired */
+    --background: 42 33% 96%;          /* #FAF7F0 warm cream */
+    --foreground: 20 14% 12%;          /* #211D1B near-black with warmth */
 
-    --card: 0 0% 96%;  /* Light gray for cards */
-    --card-foreground: 222 84% 15%;
+    --card: 42 40% 99%;                 /* nearly white cream */
+    --card-foreground: 20 14% 12%;
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 222 84% 15%;
+    --popover: 42 33% 98%;
+    --popover-foreground: 20 14% 12%;
 
-    /* Primary brand colors - Blue for buttons */
-    --primary: 182 79% 22%;  /* Blue #0c6066 - keeping original blue */
-    --primary-foreground: 0 0% 98%;
+    /* Accent — keep SciSymbio teal */
+    --primary: 182 79% 22%;             /* #0c6066 teal */
+    --primary-foreground: 42 33% 98%;
 
-    --secondary: 210 40% 94%;  /* Very light gray */
-    --secondary-foreground: 222 84% 15%;
+    --secondary: 38 25% 90%;            /* tonal cream */
+    --secondary-foreground: 20 14% 12%;
 
-    --muted: 210 40% 92%;
-    --muted-foreground: 215 20% 45%;
+    --muted: 38 20% 92%;
+    --muted-foreground: 20 8% 35%;      /* better contrast */
 
-    /* Accent - Light gray */
-    --accent: 210 40% 94%;
-    --accent-foreground: 222 84% 15%;
+    --accent: 182 79% 22%;              /* teal as the single accent */
+    --accent-foreground: 42 33% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 42 33% 98%;
 
-    --border: 214 32% 88%;
-    --input: 214 32% 94%;
+    --border: 32 15% 85%;
+    --input: 32 15% 90%;
     --ring: 182 79% 22%;
 
-    --radius: 0.75rem;
-    
-    /* Custom design tokens - Updated for light theme */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(210 40% 96%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(210 40% 94%) 0%, hsl(210 40% 98%) 100%);
-    --shadow-glow: 0 0 40px hsl(182 79% 22% / 0.2);
-    --shadow-card: 0 25px 50px -12px hsl(222 84% 15% / 0.1);
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Editorial custom tokens */
+    --shadow-subtle: 0 1px 2px hsl(20 14% 12% / 0.04), 0 2px 8px hsl(20 14% 12% / 0.04);
+    --shadow-card: 0 1px 3px hsl(20 14% 12% / 0.06), 0 8px 24px hsl(20 14% 12% / 0.06);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 42 33% 96%;
+    --sidebar-foreground: 20 14% 20%;
+    --sidebar-primary: 20 14% 12%;
+    --sidebar-primary-foreground: 42 33% 98%;
+    --sidebar-accent: 38 20% 92%;
+    --sidebar-accent-foreground: 20 14% 12%;
+    --sidebar-border: 32 15% 85%;
+    --sidebar-ring: 182 79% 22%;
   }
 }
 
@@ -66,71 +63,49 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Serif display typography for editorial headings */
+  .font-display {
+    font-family: 'Fraunces', ui-serif, Georgia, serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.025em;
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: hsl(var(--accent) / 0.2);
+    color: hsl(var(--foreground));
   }
 }
 
 @layer components {
-  /* Hero section animations */
-  .hero-gradient {
-    background: var(--gradient-hero);
-  }
-  
-  .accent-gradient {
-    background: var(--gradient-accent);
-  }
-  
-  .glow-effect {
-    box-shadow: var(--shadow-glow);
-  }
-  
   .card-shadow {
     box-shadow: var(--shadow-card);
   }
-  
+
+  .subtle-shadow {
+    box-shadow: var(--shadow-subtle);
+  }
+
   .smooth-transition {
     transition: var(--transition-smooth);
   }
 
-  /* Animated background network */
-  .network-bg {
-    background-image: 
-      radial-gradient(circle at 20% 50%, hsl(182 79% 22% / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(182 79% 22% / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, hsl(182 79% 22% / 0.08) 0%, transparent 50%);
+  /* Editorial decoration — thin horizontal rule */
+  .editorial-rule {
+    width: 40px;
+    height: 1px;
+    background-color: hsl(var(--accent));
+    display: inline-block;
   }
 
-  /* Scroll animations */
-  .fade-in-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-out;
-  }
-  
-  .fade-in-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .fade-in-left {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.6s ease-out;
-  }
-  
-  .fade-in-left.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  
-  .fade-in-right {
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.6s ease-out;
-  }
-  
-  .fade-in-right.visible {
-    opacity: 1;
-    transform: translateX(0);
+  /* Animated grain/texture for depth */
+  .paper-texture {
+    background-image:
+      radial-gradient(circle at 1px 1px, hsl(20 14% 12% / 0.02) 1px, transparent 0);
+    background-size: 24px 24px;
   }
 }

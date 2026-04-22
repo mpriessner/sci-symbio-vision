@@ -1,50 +1,58 @@
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import { LinkedinIcon } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-16 px-6 border-t border-border">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 items-center">
-          {/* Left Column - Logo and Tagline */}
-          <div className="text-center md:text-left">
-            <Logo className="mb-4 mx-auto md:mx-0" />
-            <p className="text-secondary-foreground">
+    <footer className="border-t border-border bg-secondary/30">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-4 gap-10">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-2 mb-5">
+              <Logo width={32} height={32} />
+              <span className="font-display text-xl tracking-tight">SciSymbio</span>
+            </div>
+            <p className="font-display italic text-foreground/70 text-lg max-w-sm leading-snug">
               The objective witness for every experiment.
             </p>
           </div>
-          
-          {/* Center Column - Copyright */}
-          <div className="text-center">
-            <p className="text-secondary-foreground mb-2">
-              © 2025 SciSymbio. All Rights Reserved.
+
+          {/* Sitemap */}
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-foreground/50 font-semibold mb-4">
+              Sitemap
             </p>
-            <div className="space-x-4">
-              <a 
-                href="#" 
-                className="text-secondary-foreground hover:text-accent smooth-transition text-sm"
-              >
-                Legal Notice
-              </a>
-              <span className="text-secondary-foreground">•</span>
-              <a 
-                href="#" 
-                className="text-secondary-foreground hover:text-accent smooth-transition text-sm"
-              >
-                Privacy Policy
-              </a>
-            </div>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/" className="text-foreground/70 hover:text-foreground smooth-transition">Home</Link></li>
+              <li><Link to="/articles" className="text-foreground/70 hover:text-foreground smooth-transition">Articles</Link></li>
+              <li><Link to="/team" className="text-foreground/70 hover:text-foreground smooth-transition">Team</Link></li>
+              <li><a href="mailto:contact@scisymbio.ai" className="text-foreground/70 hover:text-foreground smooth-transition">Contact</a></li>
+            </ul>
           </div>
-          
-          {/* Right Column - LinkedIn */}
-          <div className="text-center md:text-right">
-            <a 
-              href="#"
-              className="inline-flex items-center justify-center w-12 h-12 bg-accent/10 hover:bg-accent/20 rounded-full smooth-transition group"
-              aria-label="SciSymbio LinkedIn Page"
+
+          {/* Connect */}
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-foreground/50 font-semibold mb-4">
+              Connect
+            </p>
+            <a
+              href="https://www.linkedin.com/company/scisymbio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-foreground/70 hover:text-foreground smooth-transition group"
             >
-              <LinkedinIcon className="w-6 h-6 text-accent group-hover:scale-110 smooth-transition" />
+              <LinkedinIcon className="w-4 h-4 group-hover:text-accent smooth-transition" />
+              LinkedIn
             </a>
+          </div>
+        </div>
+
+        <div className="mt-14 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/50">
+          <p>© 2026 SciSymbio. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <a href="#" className="hover:text-foreground smooth-transition">Legal notice</a>
+            <a href="#" className="hover:text-foreground smooth-transition">Privacy policy</a>
           </div>
         </div>
       </div>

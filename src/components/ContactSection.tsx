@@ -1,5 +1,6 @@
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const ContactSection = () => {
   const handleEmailClick = () => {
@@ -7,37 +8,49 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6">
-      <div className="max-w-4xl mx-auto text-center">
-        <h3 className="text-4xl md:text-5xl font-bold mb-8 fade-in-up">
-          Join the <span className="text-foreground">R&D Transformation</span>.
-        </h3>
-        
-        <p className="text-xl text-foreground/70 mb-12 leading-relaxed fade-in-up">
-          We are looking for visionary partners, investors, and talent to set a new standard 
+    <section id="contact" className="py-32 px-6">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="max-w-4xl mx-auto text-center"
+      >
+        <div className="inline-flex items-center gap-3 mb-8">
+          <span className="editorial-rule" />
+          <span className="text-xs uppercase tracking-[0.25em] text-accent font-semibold">
+            Get in touch
+          </span>
+          <span className="editorial-rule" />
+        </div>
+
+        <h2 className="font-display text-4xl md:text-6xl font-light leading-[1.05] mb-8">
+          Join the <span className="italic text-accent">R&D transformation</span>.
+        </h2>
+
+        <p className="text-xl text-foreground/70 mb-14 leading-relaxed font-light max-w-2xl mx-auto">
+          We are looking for visionary partners, investors, and talent to set a new standard
           for science with us. If you share our mission, we would love to hear from you.
         </p>
-        
-        {/* Contact Information */}
-        <div className="mb-12 fade-in-up">
-          <a 
+
+        <div className="flex flex-col items-center gap-8">
+          <a
             href="mailto:contact@scisymbio.ai"
-            className="text-2xl font-semibold text-foreground hover:text-foreground/80 smooth-transition inline-flex items-center space-x-3"
+            className="font-display text-2xl md:text-3xl italic text-foreground hover:text-accent smooth-transition border-b border-accent/30 hover:border-accent pb-1"
           >
-            <Mail className="w-8 h-8" />
-            <span>contact@scisymbio.ai</span>
+            contact@scisymbio.ai
           </a>
+
+          <Button
+            onClick={handleEmailClick}
+            size="lg"
+            className="rounded-full px-8 py-6 text-base font-medium bg-foreground hover:bg-foreground/90 text-background smooth-transition group"
+          >
+            Get in touch
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 smooth-transition" />
+          </Button>
         </div>
-        
-        {/* CTA Button */}
-        <Button 
-          onClick={handleEmailClick}
-          size="lg"
-          className="px-12 py-6 text-lg font-semibold bg-accent hover:bg-accent/90 text-accent-foreground glow-effect smooth-transition fade-in-up"
-        >
-          Get in Touch
-        </Button>
-      </div>
+      </motion.div>
     </section>
   );
 };

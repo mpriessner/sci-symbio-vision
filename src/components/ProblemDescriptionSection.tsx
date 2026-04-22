@@ -1,57 +1,64 @@
+import { motion } from "framer-motion";
 import scientistImage from "@/assets/images/Scientist_sad.png";
 
 const ProblemDescriptionSection = () => {
   return (
-    <section className="py-24 px-6 bg-muted/30">
+    <section className="py-32 px-6 bg-secondary/40">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Left Column - Problem Description */}
-          <div className="fade-in-left">
-            <h3 className="text-sm font-semibold text-accent mb-4 fade-in-up">Problem</h3>
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 fade-in-up text-foreground">
-              Every day saved in R&D is<br />
-              worth millions because...
-            </h2>
-            
-            <div className="space-y-8">
-              <div>
-                <p className="text-xl leading-relaxed text-foreground/80">
-                  ... scientists <span className="font-bold text-foreground">waste 20%</span> of their <span className="font-bold text-foreground">time¹</span> with inefficient documentation, a <span className="font-bold text-foreground">~$400,000 annual loss</span> per lab², <span className="font-bold text-foreground">causing errors³</span> that contribute to a <span className="font-bold text-foreground">$28B</span> annual <span className="font-bold text-foreground">reproducibility crisis⁴</span> in US.
-                </p>
-              </div>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <span className="editorial-rule" />
+              <span className="text-xs uppercase tracking-[0.25em] text-accent font-semibold">
+                The problem
+              </span>
             </div>
-            
-            <div className="text-sm text-foreground/60 mt-12 space-y-1">
+
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05] mb-10 text-foreground">
+              Every day saved in R&D is worth <span className="italic text-accent">millions</span>.
+            </h2>
+
+            <p className="text-xl leading-relaxed text-foreground/80 font-light">
+              Scientists <span className="font-semibold text-foreground">waste 20%</span> of their <span className="font-semibold text-foreground">time</span> with inefficient documentation — a <span className="font-semibold text-foreground">~$400,000 annual loss</span> per lab, <span className="font-semibold text-foreground">causing errors</span> that contribute to a <span className="font-semibold text-foreground">$28B</span> annual <span className="font-semibold text-foreground">reproducibility crisis</span> in the U.S.
+            </p>
+
+            <div className="text-xs text-foreground/50 mt-10 space-y-1 leading-relaxed">
               <p>1. 200+ in-depth interviews with preclinical scientists within pharma and academia.</p>
               <p>2. Based on a typical 10-person lab and an estimated $200k fully-loaded annual cost per scientist.</p>
               <p>3. Baker, M. & Penny, D. Is there a reproducibility crisis? <em>Nature 533, 452–454 (2016)</em>.</p>
               <p>4. Freedman, L. P. et. al (2015) The Economics of Reproducibility in Preclinical Research. <em>PLOS Biology</em>.</p>
             </div>
-          </div>
-          
-          {/* Right Column - Visual with Quote */}
-          <div className="fade-in-right">
-            <div className="relative">
-              {/* Scientist image */}
-              <div className="rounded-2xl overflow-hidden card-shadow">
-                <img 
-                  src={scientistImage} 
-                  alt="Frustrated scientist working with complex data" 
-                  className="w-full h-96 object-cover"
-                />
-              </div>
-              
-              {/* Quote Box */}
-              <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-4 max-w-xs card-shadow">
-                <blockquote className="text-foreground italic text-sm leading-relaxed">
-                  "When you make a mistake, you might not find out until three months and thousands of dollars later."
-                </blockquote>
-                <p className="text-xs text-foreground/60 mt-2 text-right">
-                  interviewed Postdoc Genomics
-                </p>
-              </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="relative"
+          >
+            <div className="rounded-2xl overflow-hidden subtle-shadow border border-border/60">
+              <img
+                src={scientistImage}
+                alt="Frustrated scientist working with complex data"
+                className="w-full h-[28rem] object-cover"
+              />
             </div>
-          </div>
+
+            <div className="absolute -bottom-6 -left-6 bg-card rounded-xl p-6 max-w-xs card-shadow border border-border/60">
+              <blockquote className="font-display italic text-foreground leading-snug">
+                "When you make a mistake, you might not find out until three months and thousands of dollars later."
+              </blockquote>
+              <p className="text-xs text-foreground/50 mt-3 uppercase tracking-wider font-medium">
+                — Postdoc, Genomics
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
