@@ -5,7 +5,7 @@ const SITE_NAME = "SciSymbio";
 const DEFAULT_TITLE = "SciSymbio — The intelligent lab companion";
 const DEFAULT_DESCRIPTION =
   "SciSymbio is the voice- and vision-native AI companion for the wet lab. We solve the $28B research-reproducibility crisis by capturing what happens at the bench — automatically, faithfully, and audit-ready.";
-const DEFAULT_OG_IMAGE = `${SITE_URL}/SciSymbio_Logo.png`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-preview.png`;
 
 export interface SEOProps {
   title?: string;
