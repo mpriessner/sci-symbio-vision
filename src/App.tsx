@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import AmbientMolecularBackground from "./components/AmbientMolecularBackground";
+import Analytics from "./components/Analytics";
 import AuroraGlow from "./components/AuroraGlow";
 import ScrollProgress from "./components/ScrollProgress";
 import Index from "./pages/Index";
@@ -32,6 +33,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <Analytics />
         <AuroraGlow />
         <AmbientMolecularBackground />
         <ScrollProgress />
