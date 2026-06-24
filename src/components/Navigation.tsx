@@ -3,6 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import { Button } from "@/components/ui/button";
 
+// The online Lab Notebook tool is deployed separately (its own subdomain on the cloud
+// VPS — see chatbot-notebook-transparency-prototype-ui/deploy). Until it's live, the nav
+// shows it as "coming soon". When it's deployed, flip NOTEBOOK_COMING_SOON to false and
+// this becomes a live link to NOTEBOOK_URL — no other change needed.
+const NOTEBOOK_URL = "https://notebook.scisymbio.ai";
+const NOTEBOOK_COMING_SOON = true;
+
 interface NavigationProps {
   onJoinMission: () => void;
 }
@@ -48,6 +55,22 @@ const Navigation = ({ onJoinMission }: NavigationProps) => {
             <Link to="/team" className={linkClass(location.pathname === '/team')}>
               Team
             </Link>
+            {NOTEBOOK_COMING_SOON ? (
+              <span
+                className="flex items-center gap-1.5 text-sm tracking-tight text-foreground/40 cursor-not-allowed select-none"
+                title="The online Lab Notebook is coming soon"
+                aria-disabled="true"
+              >
+                Lab Notebook
+                <span className="text-[10px] uppercase tracking-wide px-1.5 py-0.5 rounded-full bg-foreground/10 text-foreground/60">
+                  Soon
+                </span>
+              </span>
+            ) : (
+              <a href={NOTEBOOK_URL} className={linkClass(false)}>
+                Lab Notebook
+              </a>
+            )}
             <Button
               onClick={onJoinMission}
               className="px-5 py-2 h-9 text-sm font-medium bg-foreground hover:bg-foreground/90 text-background smooth-transition rounded-full"

@@ -25,10 +25,9 @@ const coFounders = [
 
 const advisors = [
   {
-    label: "Advisor",
-    name: "Peter Llewellyn-Davies",
-    detail:
-      "President, BIOTECH AUSTRIA · Vice Chairman, Shield Therapeutics · Founder, Accellerate Partners",
+    label: "Stealth",
+    name: "Biotech Industry Leader",
+    detail: "Pharma board chair · biotech founder & investor",
   },
   {
     label: "Stealth",
