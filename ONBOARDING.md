@@ -22,7 +22,8 @@ Welcome. This guide gets you from zero to confidently improving the SciSymbio we
 - [Part 5 — Map of the website](#part-5--map-of-the-website)
 - [Part 6 — Copy-paste recipes](#part-6--copy-paste-recipes)
 - [Part 7 — Undo: getting out of trouble](#part-7--undo-getting-out-of-trouble)
-- [Part 8 — Glossary](#part-8--glossary)
+- [Part 8 — Growing beyond the website](#part-8--growing-beyond-the-website)
+- [Part 9 — Glossary](#part-9--glossary)
 
 ---
 
@@ -441,7 +442,69 @@ Paste the output into Claude Code. Always safe — it only reports, never change
 
 ---
 
-## Part 8 — Glossary
+## Part 8 — Growing beyond the website
+
+The website is your training ground. Once you're comfortable, the same skills apply to the rest of the company's codebases — and Martin has spent months building up a Claude Code setup that makes that work faster and safer. This section is the on-ramp.
+
+### Why you're not getting all of it on day one
+
+Martin's setup includes a couple of dozen custom commands, automated safety hooks, knowledge-graph indexes, and multi-agent review workflows. Handing you all of it now would be counterproductive: most of it is specific to codebases and hardware you don't touch yet, and the sheer volume would bury the handful of things that would genuinely help you this month.
+
+So it comes in stages. Ask Martin when you're ready for the next one.
+
+### Stage 1 — Adopt now: the safety net and the principles
+
+**The damage-control hooks.** Martin's setup intercepts every command Claude tries to run and blocks the destructive ones — recursive deletes, force-pushes, reading credential files, touching system directories. It's genuinely effective; it fires regularly. As someone who can't yet read code well enough to catch a bad command before it runs, this is the single most valuable thing to copy across. Ask Martin for the `damage-control` hooks — they're portable and take a few minutes to install.
+
+**The working principles** — these cost nothing to adopt and matter more than any tool:
+
+1. **Verification-first.** Never consider a change done until you've *seen* it work. For website work that means looking at the browser, not reading the code. Before you ask "is this finished?", ask "how would I know?"
+2. **Don't over-engineer.** Ask for exactly what you need. Claude will happily build an elaborate solution to a simple problem if you let it. "Do the simplest thing that works" is a legitimate and useful instruction.
+3. **Explore before assuming.** If you're unsure how something works, ask Claude to explain it before asking it to change it. Two minutes of reading prevents an hour of confusion.
+4. **Small, separate changes.** One idea per branch, one branch per pull request. Bundling five unrelated changes makes review hard and makes reverting a single mistake painful.
+5. **Plan the non-trivial stuff in writing first.** For anything bigger than a wording tweak, have Claude write out what it intends to do, read it, and only then say go. Martin's team formalises this as "stories" — a written description of the change, reviewed before any code exists. It catches bad ideas when they're still cheap.
+
+### Stage 2 — When you're comfortable: web-relevant tooling
+
+Three of Martin's custom commands are directly useful for website work:
+
+| Command | What it does | Why you'd want it |
+|---|---|---|
+| `/playwright-ui-test` | Drives the site in a real browser and records a video of the run | Watch what actually happens when someone clicks through your changes, instead of guessing |
+| `/gemini-vision` | Analyses images, screenshots and video | Paste a screenshot of a section and ask for design critique — genuinely useful second opinion on layout and hierarchy |
+| `/feature-workflow` | Turns a rough idea into a structured written plan before any code | Good discipline for anything larger than a tweak |
+
+### Stage 3 — Later: the heavy machinery
+
+Multi-model story review (proposals critiqued by several AI models before implementation), codebase knowledge graphs for navigating large repos structurally, and multi-agent orchestration for big parallel tasks. Powerful, but they only earn their complexity on large codebases. The marketing site is roughly forty files — you don't need them yet.
+
+### ⚠️ Commands you must not run
+
+Some of Martin's setup talks to physical hardware and confidential data. If you end up with his full skill set, leave these alone:
+
+| Command | Why |
+|---|---|
+| `/hw-test`, `/glasses-e2e` | Send jobs to real Rokid glasses and a phone physically on Martin's desk, coordinated by a shared lock. Running these from your machine will at best fail confusingly, at worst disrupt a test he's mid-way through |
+| `/tsa`, `/ask-interviews` | Operate on confidential founder-interview data and its transcription pipeline |
+| `/agentic-loop` | Needs a local engine and connected Android devices; single-tenant, so two people running it collide |
+
+### Write your own CLAUDE.md as you learn
+
+You've already seen `CLAUDE.md` in this project — the file Claude reads automatically each session. You can create one anywhere. As you discover things that trip you up repeatedly, add them:
+
+> "Add a note to CLAUDE.md that we always use npm here, never bun — I keep forgetting."
+
+Over time this becomes your accumulated knowledge, and Claude stops making the same mistakes. **You don't need permission to edit it** — it's a working document, and improving it is one of the highest-leverage habits you can build.
+
+One caution: keep it lean. Everything in `CLAUDE.md` is re-read on every single session, so it should hold rules and facts Claude needs *every time* — not long explanations. Long-form material belongs in a separate file like this one, which you point Claude at when it's relevant.
+
+### One thing to never do
+
+**Never put API keys, passwords or tokens in a file you commit.** Martin's personal settings file contains live credentials, which is exactly why you're getting a curated copy of his setup rather than the whole thing. If you're ever unsure whether something is safe to commit, ask before pushing — it's far easier than removing a leaked secret from git history afterwards.
+
+---
+
+## Part 9 — Glossary
 
 | Term | Meaning |
 |---|---|
