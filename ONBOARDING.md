@@ -450,11 +450,15 @@ The website is your training ground. Once you're comfortable, the same skills ap
 
 Martin's setup includes a couple of dozen custom commands, automated safety hooks, knowledge-graph indexes, and multi-agent review workflows. Handing you all of it now would be counterproductive: most of it is specific to codebases and hardware you don't touch yet, and the sheer volume would bury the handful of things that would genuinely help you this month.
 
-So it comes in stages. Ask Martin when you're ready for the next one.
+So it comes in stages, and the first two are already packaged for you:
+
+> **https://github.com/mpriessner/symbio-claude-setup** (private — you've been invited)
+
+Clone it and follow its README. It contains the safety hooks, a starter set of working principles, and three genuinely useful commands — with everything hardware-bound or confidential deliberately left out. Ask Martin when you're ready for what comes after.
 
 ### Stage 1 — Adopt now: the safety net and the principles
 
-**The damage-control hooks.** Martin's setup intercepts every command Claude tries to run and blocks the destructive ones — recursive deletes, force-pushes, reading credential files, touching system directories. It's genuinely effective; it fires regularly. As someone who can't yet read code well enough to catch a bad command before it runs, this is the single most valuable thing to copy across. Ask Martin for the `damage-control` hooks — they're portable and take a few minutes to install.
+**The damage-control hooks.** Martin's setup intercepts every command Claude tries to run and blocks the destructive ones — recursive deletes, force-pushes, reading credential files, touching system directories. It's genuinely effective; it fires regularly. As someone who can't yet read code well enough to catch a bad command before it runs, this is the single most valuable thing to copy across. They're in the setup repo under `hooks/damage-control/`, and take about fifteen minutes to install. **Do this before you do anything else in Stage 2 or 3.**
 
 **The working principles** — these cost nothing to adopt and matter more than any tool:
 
